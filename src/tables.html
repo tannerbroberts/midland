@@ -3,7 +3,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tables Assignment</title>
-  <link rel="stylesheet" href='./tables.css'>
   <style>
     * {
       font-family: monospace
@@ -48,10 +47,24 @@
       bottom: 0;
       width: 100%;
     }
+    .spaced-children {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+    }
+    .form-group > label {
+      width: 100px;
+      text-align: right;
+    }
   </style>
 </head>
 <body>
-  <div class="header-footer">Header</div>
+  <div class="header-footer">This is a website to show the sad sad eating schedule of the long man</div>
   <table>
     <tr>
       <th></th>
@@ -78,17 +91,50 @@
       <td>Dinner</td>
     </tr>
   </table>
-  <form class="marginalized flex-column">
-    <label htmlFor="name">Name:
-      <input type="text" name="name" placeholder="Name">
-    </label>
-    <label htmlFor="email">Email:
-      <input type="email" name="email" placeholder="Email">
-    </label>
-    <label type="number' htmlFor="age">Age:
-      <input type="number" name="age" placeholder="Age">
-    </label>
-  </form>
+  <div class="marginalized flex-column">
+    <h2>Contact the long man if you'd like to help him eat better</h2>
+    <form class="spaced-children">
+      <div class="form-group">
+        <label htmlFor="name">Name:</label>
+        <input type="text" name="name" placeholder="Name">
+      </div>
+      <div class="form-group">
+        <label htmlFor="email">Email:</label>
+        <input type="email" name="email" placeholder="Email">
+      </div>
+      <div class="form-group">
+        <label htmlFor="age">Age:</label>
+        <input type="number" name="age" placeholder="Age">
+      </div>
+      <!-- Next up, a radio button group -->
+      <div class="form-group">
+        <label htmlFor="favorite-number">Favorite Number:</label>
+        <input type="radio" name="favorite-number" value="1">1
+        <input type="radio" name="favorite-number" value="2">2
+        <input type="radio" name="favorite-number" value="3">3
+        <input type="radio" name="favorite-number" value="4">4
+        <input type="radio" name="favorite-number" value="5">5
+      </div>
+      <!-- Next up, a checkbox group -->
+      <div class="form-group">
+        <label htmlFor="favorite-color">Favorite Color:</label>
+        <input type="checkbox" name="favorite-color" value="red">Red
+        <input type="checkbox" name="favorite-color" value="green">Green
+        <input type="checkbox" name="favorite-color" value="blue">Blue
+      </div>
+      <!-- Select is one of those things thats next -->
+      <div class="form-group">
+        <label htmlFor="favorite-fruit">Favorite Fruit:</label>
+        <select name="favorite-fruit">
+          <option value="apple">Apple</option>
+          <option value="banana">Banana</option>
+          <option value="cherry">Cherry</option>
+          <option value="date">Date</option>
+          <option value="elderberry">Elderberry</option>
+        </select>
+      </div>
+    </form>
+  </div>
   <div class="header-footer bottom">Footer</div>
 </body>
 </html>
