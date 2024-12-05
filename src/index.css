@@ -1,0 +1,52 @@
+html {
+  /* no scolling */
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#app {
+  width: 90%;
+  height: 90%;
+  padding: 0px;
+  position: relative;
+}
+
+#player {
+  position: absolute;
+  transition: all 0.2s ease-in-out;
+  border-radius: 35%;
+  box-sizing: border-box;
+  border: 5px solid black;
+}
+
+.square {
+  display: inline-block;
+  position: absolute;
+  box-sizing: border-box;
+  border-width: 3px;
+}
+
+.left-wall {
+  border-left-style: solid;
+}
+
+.right-wall {
+  border-right-style: solid;
+}
+
+.top-wall {
+  border-top-style: solid;
+}
+
+.bottom-wall {
+  border-bottom-style: solid;
+}
